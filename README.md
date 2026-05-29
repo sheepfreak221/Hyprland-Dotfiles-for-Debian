@@ -7,7 +7,7 @@ A simple Hyprland setup for Debian Testing (forky) with a purple aesthetic.
 ## Packages
 
 ```bash
-apt install hyprland hyprpaper hypridle wlogout kitty wofi waybar cliphist wl-clipboard hyprlock grim slurp starship
+apt install hyprland hyprpaper hypridle wlogout kitty wofi waybar cliphist wl-clipboard hyprlock grim slurp starship yazi
 ````
 
 ## Required packages (recommended extras)
