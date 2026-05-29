@@ -7,7 +7,7 @@
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["tray", "group/right"],
 
-"group/right": {
+    "group/right": {
     "orientation": "horizontal",
     "modules": [
         "mpris",
@@ -15,20 +15,20 @@
         "custom/weather",
         "network",
         "pulseaudio"
-    ]
-},
+        ]
+    },
 
-"group/left": {
-    "orientation": "horizontal",
-    "modules": [
-        "clock",
-        "cpu",
-        "custom/gpu",
-        "memory",
-        "custom/disk",
-        "custom/temperature"
-    ]
-},
+    "group/left": {
+        "orientation": "horizontal",
+            "modules": [
+            "clock",
+            "cpu",
+            "custom/gpu",
+            "memory",
+            "custom/disk",
+            "custom/temperature"
+        ]
+    },
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -112,7 +112,7 @@
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl previous",
         "tooltip": true,
-"tooltip-format": "{title}\n{artist}\n{position}/{length}"
+        "tooltip-format": "{title}\n{artist}\n{position}/{length}"
     },
 
     "tray": {
