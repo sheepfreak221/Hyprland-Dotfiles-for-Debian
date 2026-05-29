@@ -1,0 +1,91 @@
+window {
+    margin: 0px;
+    border: 2px solid #a882ff;
+    border-radius: 20px;
+    background-color: rgba(15, 10, 25, 0.92);
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 14px;
+}
+
+/* Eingabefeld */
+#input {
+    margin: 16px 16px 8px 16px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 14px;
+    color: #ded8ff;
+    background-color: rgba(168, 130, 255, 0.12);
+    font-size: 14px;
+}
+
+#input:focus {
+    box-shadow: 0 0 6px rgba(168, 130, 255, 0.4);
+    background-color: rgba(168, 130, 255, 0.18);
+}
+
+/* Äußere Box */
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Scroll-Container */
+#scroll {
+    margin: 4px 8px;
+}
+
+/* Liste der Einträge */
+#entry {
+    margin: 4px 8px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: #b4b4f0;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#entry:selected {
+    background-color: rgba(168, 130, 255, 0.25);
+    color: #ffffff;
+    border-left: 3px solid #a882ff;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+}
+
+#entry > box {
+    margin-left: 8px;
+}
+
+/* Text innerhalb eines Eintrags */
+#text {
+    margin: 0px;
+    font-weight: 500;
+}
+
+/* Icons (die kleinen App-Icons) */
+#img {
+    margin-right: 12px;
+    -gtk-icon-transform: scale(1);
+}
+
+/* Layout-Container */
+#layout {
+    margin: 8px 0px;
+}
+
+/* Scrollbar (falls nötig) */
+scrollbar {
+    margin: 4px 0px;
+}
+
+scrollbar slider {
+    background-color: rgba(168, 130, 255, 0.4);
+    border-radius: 10px;
+    min-width: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: rgba(168, 130, 255, 0.6);
+}

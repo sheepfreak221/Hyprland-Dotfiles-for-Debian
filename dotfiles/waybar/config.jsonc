@@ -1,0 +1,154 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "width": 1824,
+    "modules-left": ["group/left"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "group/right"],
+
+"group/right": {
+    "orientation": "horizontal",
+    "modules": [
+        "mpris",
+        "custom/clipboard",
+        "custom/weather",
+        "network",
+        "pulseaudio"
+    ]
+},
+
+"group/left": {
+    "orientation": "horizontal",
+    "modules": [
+        "clock",
+        "cpu",
+        "custom/gpu",
+        "memory",
+        "custom/disk",
+        "custom/temperature"
+    ]
+},
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "sort-by-number": true,
+        "active-only": false,
+        "all-outputs": true,
+        "show-special": false,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": []
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "interval": 1,
+        "tooltip-format": "{:%A, %d. %B %Y}"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 2,
+        "tooltip-format": "CPU: {usage}%\nAvg: {avg_freq} MHz",
+        "on-click": "kitty -e btop"
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "interval": 5,
+        "tooltip-format": "RAM: {used}GB / {total}GB\nSWAP: {swapUsed}GB / {swapTotal}GB"
+    },
+
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰤮 offline",
+        "format-linked": "󱚵 {ifname} (no IP)",
+        "interval": 5,
+        "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\n{essid} ({signalStrength}%)",
+        "on-click": "kitty -e nmtui",
+        "max-length": 50
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "custom/temperature": {
+        "exec": "/home/testuser/.config/waybar/scripts/temperature.sh",
+        "interval": 5,
+        "return-type": "json",
+        "format": "{}"
+    },
+
+    "mpris": {
+        "format": "{player_icon}",
+        "format-paused": "{status_icon}",
+        "player-icons": {
+            "spotify": "",
+            "firefox": "󰈹",
+            "vlc": "󰕼",
+            "default": "󰎈"
+        },
+        "status-icons": {
+            "playing": "󰐊",
+            "paused": "󰏤",
+            "stopped": "󰓛"
+        },
+        "interval": 1,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-middle": "playerctl previous",
+        "tooltip": true,
+"tooltip-format": "{title}\n{artist}\n{position}/{length}"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "custom/disk": {
+        "exec": "~/.config/waybar/scripts/disk_all.sh",
+        "interval": 30,
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "kitty -e ncdu /home"
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "interval": 600, 
+        "exec": "~/.config/waybar/scripts/weather.sh", 
+        "return-type": "json"
+    },
+
+    "custom/gpu": {
+        "exec": "~/.config/waybar/scripts/gpu.sh",
+        "interval": 2,
+        "return-type": "json",
+        "format": "{}",
+        "on-click": "kitty -e nvtop"
+    },
+
+    "custom/clipboard": {
+        "exec": "~/.config/waybar/scripts/clipboard.sh",
+        "interval": 2,
+        "return-type": "json",
+        "on-click": "cliphist list | wofi --dmenu | cliphist decode | wl-copy",
+        "on-click-right": "cliphist wipe",
+        "tooltip": true
+    }
+}

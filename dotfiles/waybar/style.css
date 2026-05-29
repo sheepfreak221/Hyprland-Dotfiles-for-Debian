@@ -1,0 +1,208 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 18px;
+}
+
+window#waybar {
+    background: rgba(16, 12, 24, 0.88);
+    border-radius: 12px;
+    margin: 6px 10px 0 10px;
+    padding: 4px 10px;
+}
+
+/* WORKSPACES */
+
+#workspaces {
+    margin: 0 2px;
+}
+
+#workspaces button {
+    padding: 2px 8px;
+    margin: 0 2px;
+    color: #8f86ad;
+    background: transparent;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(168, 130, 255, 0.06);
+    color: #cfc7ee;
+}
+
+#workspaces button.active {
+    background: rgba(168, 130, 255, 0.12);
+    color: #f2efff;
+}
+
+/* MODULE BASIS  */
+
+#window,
+#clock,
+#network,
+#battery,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-weather,
+#custom-temperature, 
+#custom-weather,
+#custom-disk,
+#custom-gpu,
+#custom-clipboard {
+    padding: 0 8px;
+    margin: 0 2px;
+    min-width: 45px;
+    color: #b7b0cf;
+    background: transparent;
+    border-radius: 8px;
+
+    transition: background 0.15s ease;
+}
+
+/* SUBTLE HOVER */
+
+#window:hover,
+#clock:hover,
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#mpris:hover,
+#custom-weather:hover,
+#custom-temperature:hover,
+#custom-weather:hover,
+#custom-disk:hover,
+#custom-gpu:hover,
+#custom-clipboard:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+#mpris {
+    color: #ddd7f8;
+    background: rgba(168, 130, 255, 0.08);
+}
+
+/* WINDOW */
+
+#window {
+    color: #9e96bb;
+}
+
+/* NETWORK */
+
+#network.disconnected {
+    color: #d998aa;
+}
+
+/* AUDIO */
+
+#pulseaudio.muted {
+    color: #746d8c;
+}
+
+/* CPU/RAM */
+
+#cpu.warning {
+    color: #d998aa;
+}
+
+/* MPRIS */
+
+#mpris.playing {
+    color: #cdd6f4;  
+}
+
+#mpris.paused {
+    color: #6c7086;  
+}
+
+#mpris.stopped {
+    color: #45475a;  
+}
+
+/* TOOLTIP */
+
+tooltip {
+    background: rgba(20, 16, 28, 0.96);
+    border-radius: 10px;
+    border: 1px solid rgba(168, 130, 255, 0.08);
+}
+
+tooltip label {
+    color: #d8d2ef;
+}
+
+/* SEPARATOR */
+
+#custom-separator {
+    color: #4d4664;
+    margin: 0 2px;
+}
+
+#group-right {
+    background: rgba(30, 30, 46, 0.35);
+
+    border-radius: 12px;
+
+    margin: 4px 8px;
+    padding: 0 6px;
+}
+
+/* einzelne module in der gruppe */
+#custom-clipboard,
+#custom-weather,
+#network,
+#pulseaudio {
+    padding: 0 6px;
+    margin: 0;
+
+    color: #b7b0cf;
+    background: transparent;
+
+    border-radius: 8px;
+
+    transition: background 0.15s ease;
+}
+
+/* hover */
+#custom-clipboard:hover,
+#custom-weather:hover,
+#network:hover,
+#pulseaudio:hover,
+#mpris:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* tray speziell */
+#tray {
+    min-width: 0;
+    border-radius: 12px;
+
+    margin: 4px 8px 4px 0;
+    padding: 0 6px;
+}
+#mpris {
+    padding: 0 6px;
+    margin: 0;
+    min-width: 20px;
+    color: #b7b0cf;
+    background: transparent;
+    border-radius: 8px;
+
+    transition: background 0.15s ease;
+}
+
+#custom-clipboard {
+    padding-left: 5px;
+    padding-right: 3px;
+
+    margin: 0;
+
+    min-width: 0;
+}
