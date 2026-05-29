@@ -7,13 +7,13 @@ A simple Hyprland setup for Debian Testing (forky) with a purple aesthetic.
 ## Packages
 
 ```bash
-apt install hyprland hyprpaper hypridle wlogout kitty wofi waybar cliphist wl-clipboard hyprlock grim slurp starship yazi
+apt install hyprland hyprpaper hypridle wlogout kitty wofi waybar cliphist wl-clipboard hyprlock grim slurp 
 ````
 
 ## Required packages (recommended extras)
 
 ```bash
-apt install btop nvtop ncdu nmtui
+apt install btop nvtop ncdu nmtui starship yazi
 ```
 
 ## Fonts
